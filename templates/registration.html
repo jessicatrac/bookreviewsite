@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Registration for the book review club
+{% endblock %}
+
+{% block body %}
+
+
+<h1>To register, please fill in the fields below.</h1>
+
+<br>
+<br>
+
+<form action="{{ url_for('re_login') }}" method="post">
+    <input type="text" name="username" placeholder="Username"> 
+    <input type="Password" name="password" placeholder="Password"> 
+    <button>Register</button>
+</form>
+
+<br>
+<br>
+
+<p>Once registered, you'll be prompted to login again and get started!</p>
+
+
+{% endblock %}

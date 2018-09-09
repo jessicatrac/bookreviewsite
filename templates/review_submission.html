@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Review submitted
+{% endblock %}
+
+{% block body %}
+    <h1>Thanks!</h1>
+    <p>
+	    Your review of {{ user_rating }} stars has been inputted into our database.<br>
+	    Here's your review: 
+	    <br>
+	    <br>
+	    {{ user_comments }}
+
+	    <br>
+	    <a href="/search">Click here to search for another book. </a>
+	</p>
+{% endblock %}

@@ -1,0 +1,43 @@
+table-layout: auto;
+
+h1 {
+	color:red;
+}
+
+
+tr td, th{
+  padding-left: 0 !important;
+  padding-top:  0 !important;
+
+}
+
+tr td {
+	font-style: italic;
+}
+
+a {
+	color: black;
+}
+
+a:hover {
+	color: white;
+	text-decoration: none;
+	background-color: black;
+}
+
+#main_name {
+	font-weight: bolder;
+}
+
+.time {
+	font-weight: bolder;
+	color: white;
+	background-color: black;
+	text-align: center;
+}
+
+.paper_link:hover {
+	color: black;
+	text-decoration: underline;
+	background-color: white;
+}

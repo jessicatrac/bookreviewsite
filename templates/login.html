@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+
+
+{% block title %}
+
+Book Review Site
+
+{% endblock %}
+
+
+
+{% block body %}
+
+
+<h1>Hello! Welcome to Jess' book review club. </h1> 
+<h4>Population 0 because no one let me join their book club. To join a sista, login below!</h3> 
+<br>
+
+
+<form action="{{ url_for('sign') }}" method="post">
+    <input type="text" name="username" placeholder="Username"> <br>
+    <input type="password" name="password" placeholder="Password"> <br><br>
+    <button>Sign in</button>
+</form>
+
+<br>
+<p>
+Not yet a user? Click <a href="{{ url_for('registration') }}">here</a> to register.
+</p>
+
+{% endblock %}

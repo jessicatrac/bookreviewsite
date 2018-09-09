@@ -1,0 +1,39 @@
+{% extends "layout.html"%}
+
+{% block title %}
+
+Sista found ya some books
+
+{% endblock %}
+
+{% block body %} 
+
+
+
+
+<h1>{{ book.title }}</h1> 
+<p>by {{ book.author }} ({{ book.year }}), isbn number {{ book.isbn }} <br>
+total ratings: {{ book_review_count }}, average rating: {{ book_avg_rating }}</p>
+
+<br>
+<br>
+
+<h4>Some user reviews on {{ book.title }}...</h4>
+
+<br>
+<br>
+
+<h4>Leave a review for {{ book.title }}...</h4>
+<form action="{{ url_for('review_submission') }}" method="post">
+	<input type="range" name="user_rating" min="1" max="5"><br>
+	<textarea name="user_comments">Enter review here...</textarea><br>
+    <button>Submit review</button>
+</form>
+<br>
+<br>
+
+<br>
+<br>
+<a href ="{{ url_for('search') }}">Return to search for another book</a>
+
+{% endblock %}

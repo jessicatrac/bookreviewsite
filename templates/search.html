@@ -1,0 +1,27 @@
+{% extends "layout.html"%}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %} 
+
+
+
+<h1>Okiii {{ name }} you're all set to search for the mf perfect book club book. </h1> 
+<h4>All you gotta do is enter below the following:</h3> 
+
+
+<ul>
+    <li>ISBN Number</li>
+    <li>Book Title</li>
+    <li>Author Name</li>
+</ul>
+
+<form action="{{ url_for('book_results') }}" method="post">
+    <input type="text" name="user_search_key" placeholder="Author, Title or ISBN"> 
+    <button>Search</button>
+</form>
+
+
+{% endblock %}

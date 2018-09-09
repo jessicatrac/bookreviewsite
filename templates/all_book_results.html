@@ -1,0 +1,32 @@
+{% extends "layout.html"%}
+
+{% block title %}
+
+Sista found ya some books
+
+{% endblock %}
+
+{% block body %} 
+
+
+
+<h1>Ya sista found you some books!!!</h1> 
+<h4>The books you wanted:</h3> 
+
+
+<ul>
+
+	{% for book in books_list %}
+
+    <li>
+    	<a href="{{ url_for('bookpage', isbn_search=book.isbn) }}">
+    		{{ book.title }}
+		</a>
+    </li>
+
+    {% endfor %}
+
+</ul>
+
+
+{% endblock %}
